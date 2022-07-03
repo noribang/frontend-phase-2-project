@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>
-        Click me
+        Click me please!
       </button>
     </div>
   );
