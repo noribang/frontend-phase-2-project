@@ -26,7 +26,7 @@ function DrinksListContainer() {
     return (
         <div>
             {/* <DrinksSearch /> */}
-            <h1>Drinks Container</h1>
+            <h1>My Drinks</h1>
             <DrinksList drinksCollect={drinksCollect} />
         </div>
     );

@@ -15,9 +15,6 @@ function App() {
                 <Route path="/drinkslistcontainer">
                     <DrinksListContainer />
                 </Route>
-                {/* <Route exact path="/drinkssearch">
-                    <DrinksSearch />
-                </Route> */}
                 <Route exact path="/drinkssearchcontainer">
                     <DrinksSearchContainer />
                 </Route>

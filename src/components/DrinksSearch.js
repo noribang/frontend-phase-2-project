@@ -22,18 +22,6 @@ function DrinksSearch({ handleSearchFormSubmit }) {
         // console.log("newSearch", newSearch)
     }
     
-
-    // /* FETCH FROM DRINKS API */
-    // function fetchDrinks() {
-    //     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchDrink}`)
-    //         // .then((r) => console.log("search: ",  r.json()))
-    //         .then((r) => r.json())
-    //         .then((data) => console.log("search data: ", data))
-    // }
-
-    // /* CALL FETCHDRINKS */
-    // fetchDrinks();
-
     return (
         <div>
             <h1>Drinks Search</h1>
