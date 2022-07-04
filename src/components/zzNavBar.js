@@ -8,10 +8,11 @@ const navBarStyle = {
 function NavBar() {
   
   return (
-    <div >
+    <div className="navbar">
       <NavLink exact to="/" style={navBarStyle}>Home</NavLink>
-      <NavLink exact to="/drinkscollection" style={navBarStyle}>Drinks Collection</NavLink>
-      <NavLink exact to="/drinkssearch" style={navBarStyle}>Drinks Search</NavLink>
+      <NavLink exact to="/movies" style={navBarStyle}>Movies</NavLink>
+      <NavLink exact to="/directors" style={navBarStyle}>Directors</NavLink>
+      <NavLink exact to="/actors">Actors</NavLink>
            
     </div>
   );

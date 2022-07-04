@@ -1,13 +1,13 @@
 import React from "react";
 
 
-function Home() {
+function DrinksSearch() {
 
     return (
         <div>
-            Home
+            DrinksSearch
         </div>
     );
 }
 
-export default Home;
+export default DrinksSearch;
