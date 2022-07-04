@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DrinksSearch from "./DrinksSearch";
 import DrinksSearchList from "./DrinksSearchList";
 
-import { v4 as uuid} from "uuid";
 
 
 function DrinksSearchContainer() {

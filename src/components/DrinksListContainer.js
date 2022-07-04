@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import DrinksSearch from "./DrinksSearch";
 import DrinksList from "./DrinksList";
 // import { v4 as uuid } from "uuid";
 
