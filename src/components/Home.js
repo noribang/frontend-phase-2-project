@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <div>
-            Home
+            <h1>Home of Cocktails-Apalooza!</h1>
         </div>
     );
 }

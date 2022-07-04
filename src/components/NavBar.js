@@ -10,8 +10,8 @@ function NavBar() {
   return (
     <div >
       <NavLink exact to="/" style={navBarStyle}>Home</NavLink>
-      <NavLink exact to="/drinkscollection" style={navBarStyle}>Drinks Collection</NavLink>
-      <NavLink exact to="/drinkssearch" style={navBarStyle}>Drinks Search</NavLink>
+      <NavLink exact to="/drinkslistcontainer" style={navBarStyle}>My Drinks</NavLink>
+      <NavLink exact to="/drinkssearchcontainer" style={navBarStyle}>Drinks Search</NavLink>
            
     </div>
   );

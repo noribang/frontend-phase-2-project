@@ -1,11 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 
 
-function DrinksSearch() {
+
+function DrinksSearch({ handleSearchFormSubmit }) {
+    const [newSearch, setNewSearch] = useState("");
+
+    /* UPDATES LOCAL STATE NEWSEARCH */
+    function handleSearch(event) {
+        event.stopPropagation();
+        console.log(event.target.value);
+        /* UPDATES NEW SEARCH STATE */
+        setNewSearch(event.target.value);
+        // console.log(event.target.value);
+    }
+    /* PUSHES NEW SEARCH UP TO PARENT COMPONENT */
+    function handleSubmit(event) {
+        // Prevent default page load.
+        event.preventDefault();
+        /* PUSH LOCAL STATE NEWSEARCH DATA UP TO PARENT COMPONENT */
+        handleSearchFormSubmit(newSearch);
+        // console.log("newSearch", newSearch)
+    }
+    
+
+    // /* FETCH FROM DRINKS API */
+    // function fetchDrinks() {
+    //     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchDrink}`)
+    //         // .then((r) => console.log("search: ",  r.json()))
+    //         .then((r) => r.json())
+    //         .then((data) => console.log("search data: ", data))
+    // }
+
+    // /* CALL FETCHDRINKS */
+    // fetchDrinks();
 
     return (
         <div>
-            DrinksSearch
+            <h1>Drinks Search</h1>
+            <form 
+            onSubmit={handleSubmit}
+            >
+                <label>Enter a letter:</label>
+                <input 
+                type="text" 
+                name="name"
+                placeholder="Search drinks by letter..."
+                value={newSearch}
+                onChange={handleSearch}
+                ></input>
+                <button type="submit">Find Drinks</button>
+            </form>
         </div>
     );
 }
