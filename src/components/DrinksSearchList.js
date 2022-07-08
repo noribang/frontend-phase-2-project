@@ -11,7 +11,7 @@ const liStyle = {
     float: "left"
 }
 
-function DrinksSearchList({ src, obj }) {
+function DrinksSearchList({ src, obj, handleAddDrink }) {
     // console.log(obj);
 
     /* DELETES BOT OBJECT FROM DB.JSON */
@@ -25,29 +25,33 @@ function DrinksSearchList({ src, obj }) {
 //       .then(() => handleDeletBot(bot))
 //   }
 
-    // function handleAddClick(event) {
-    //     console.log(obj)
-    //     console.log("CLICKED ON!!!");
+    /* POST REQUEST TO HEROKU DB.JSON SERVER */
+    /* ADDS DRINKS OBJECT TO HEROKU DB.JSON SERVER */
+    function handleAddClick(event) {
+        console.log(obj)
+        console.log("CLICKED ON!!!");
 
-    //     event.stopPropagation();
+        event.stopPropagation();
 
-    //     fetch("https://backend-p-2-project-flatiron.herokuapp.com/drinks", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(obj),
-    //     })
-    //         .then((r) => console.log(r.json()))
-            
-    // }
+        fetch("https://backend-p-2-project-flatiron.herokuapp.com/drinks/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(obj),
+        })
+            // .then((r) => console.log(r.json()))
+            .then((r) => r.json())
+            // .then((data) => console.log(data))
+            .then((data) => handleAddDrink(obj))
+    }
 
 
     return (
         <div>
             {/* DrinksSearchList */}
             <li 
-                // onClick={handleAddClick}
+                onClick={handleAddClick}
                 style={liStyle} 
                 key={uuid()}
             >

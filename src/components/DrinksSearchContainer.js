@@ -4,9 +4,9 @@ import DrinksSearchList from "./DrinksSearchList";
 
 
 
-function DrinksSearchContainer() {
+function DrinksSearchContainer({ handleAddDrink }) {
     /* STATE */
-    const [searchImgDrink, setSearchImgDrink] = useState("f");
+    const [searchImgDrink, setSearchImgDrink] = useState("");
     const [searchImgArr, setSearchImgArr] = useState([]);
 
     /* UPDATES STATE FROM NEW SEARCH PASSED FROM CHILD DRINKSSEARCH */
@@ -24,7 +24,8 @@ function DrinksSearchContainer() {
             // .then((data) => console.log("search data: ", data))
             .then((data) => {
                 // console.log("data.drinks: ", data.drinks);
-                const newArr = data.drinks.filter((obj, idx) => idx < 10);
+                // const newArr = data.drinks.filter((obj, idx) => idx < 10);
+                const newArr = data.drinks.filter((obj) => obj);
                 // console.log("newArr ", newArr);
                 /* UPDATE STATE searchImgArr */
                 setSearchImgArr(newArr);
@@ -46,6 +47,7 @@ function DrinksSearchContainer() {
                                                         key={idx} 
                                                         src={obj.strDrinkThumb}
                                                         obj={obj}
+                                                        handleAddDrink={handleAddDrink}
                                                     />)}
                 </ul>
             </div>
