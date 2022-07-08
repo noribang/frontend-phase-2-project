@@ -12,6 +12,8 @@ function DrinksSearch({ handleSearchFormSubmit }) {
         /* UPDATES NEW SEARCH STATE */
         setNewSearch(event.target.value);
         // console.log(event.target.value);
+        /* CLEAR OUT INPUT VALUE */
+        // event.target.value="";
     }
     /* PUSHES NEW SEARCH UP TO PARENT COMPONENT */
     function handleSubmit(event) {
@@ -20,6 +22,8 @@ function DrinksSearch({ handleSearchFormSubmit }) {
         /* PUSH LOCAL STATE NEWSEARCH DATA UP TO PARENT COMPONENT */
         handleSearchFormSubmit(newSearch);
         // console.log("newSearch", newSearch)
+        /* CLEAR OUT INPUT VALUE */
+        // event.target.value="";
     }
     
     return (
