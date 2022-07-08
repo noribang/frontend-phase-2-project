@@ -6,7 +6,7 @@ import DrinksSearchList from "./DrinksSearchList";
 
 function DrinksSearchContainer({ handleAddDrink }) {
     /* STATE */
-    const [searchImgDrink, setSearchImgDrink] = useState("");
+    const [searchImgDrink, setSearchImgDrink] = useState("a");
     const [searchImgArr, setSearchImgArr] = useState([]);
 
     /* UPDATES STATE FROM NEW SEARCH PASSED FROM CHILD DRINKSSEARCH */
